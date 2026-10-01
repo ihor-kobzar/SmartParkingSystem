@@ -28,6 +28,14 @@ If a class is not listed here, it should be treated as disallowed until reviewed
 - `text-brand-400`
 - `text-sky-500`
 
+### Alert / Disabled Slot
+
+Used intentionally for parking spots that are turned off, mirroring the red LED color used for disabled slots on the Arduino route strip. Not for generic warnings — warnings still use the warm palette.
+
+- `bg-red-400`
+- `hover:bg-red-500`
+- `text-white` (paired with red and brand-300 surfaces for legibility)
+
 ### Calm Text / Surface
 
 - `bg-calm-50`
@@ -54,6 +62,7 @@ If a class is not listed here, it should be treated as disallowed until reviewed
 - `bg-white/70`
 - `bg-white/80`
 - `bg-white/85`
+- `bg-white/90`
 
 ## Allowed Typography Classes
 
@@ -157,6 +166,7 @@ If a class is not listed here, it should be treated as disallowed until reviewed
 - `lg:grid-cols-[1fr_1fr]`
 - `lg:grid-cols-[1fr_auto]`
 - `lg:grid-cols-[0.75fr_1.25fr]`
+- `lg:grid-cols-[3fr_1fr]`
 - `lg:items-center`
 - `lg:items-start`
 - `lg:items-stretch`
@@ -223,6 +233,23 @@ These are local layout hooks backed by small component-level CSS where Tailwind 
 - `workspace-events-filters`
 - `workspace-monitor-actions`
 - `workspace-monitor-texts`
+- `workspace-parking-floor-layer`
+- `workspace-parking-edit-button`
+- `workspace-parking-header-floor`
+- `workspace-parking-header-fullscreen`
+- `workspace-parking-fullscreen-overlay`
+- `workspace-parking-fullscreen-section`
+- `workspace-parking-fullscreen-left`
+- `workspace-parking-fullscreen-article`
+- `workspace-parking-fullscreen-floor`
+- `workspace-parking-fullscreen-aspect`
+- `workspace-parking-fullscreen-aside`
+- `workspace-parking-fullscreen-detail`
+- `workspace-parking-fullscreen-detail-grid`
+- `workspace-parking-fullscreen-snapshot`
+- `workspace-parking-fullscreen-snapshot-img`
+
+The `workspace-parking-fullscreen-*` group is necessary because the fullscreen layout combines a fixed-aspect map with a side panel under viewport-height constraints that pure Tailwind utilities cannot express cleanly (aspect-ratio + max-height + flex chaining).
 
 ## Rule For New Classes
 
